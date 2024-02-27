@@ -14,7 +14,8 @@ on:
     - cron: '15 6 * * 0' # Run every Sunday at 6:15 UTC
   workflow_dispatch: # Manually trigger the workflow
 
-Build:
+jobs:
+  Build:
     runs-on: ubuntu-latest
     name: Build
     steps:
