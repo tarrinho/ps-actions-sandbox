@@ -9,11 +9,11 @@ jobs:
       MY_ENV: 'Environment variable value'
     steps:
       - name: List_job
-      run: echo '${{ toJSON(job)}}'
+        run: echo '${{ toJSON(job)}}'
       - name: List_runner
-      run: echo '${{ toJSON(runner)}}'
+        run: echo '${{ toJSON(runner)}}'
       - name: List_ENV
-      run: echo '${{ toJSON(env)}}'
+        run: echo '${{ toJSON(env)}}'
       - name: List_github
-      run: echo '${{ toJSON(github)}}'
+        run: echo '${{ toJSON(github)}}'
  
