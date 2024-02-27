@@ -21,11 +21,7 @@ Build:
       - name: Checkout Repository
         uses: actions/checkout@v2
         
-      - name: Print Current Branch
-        run: echo "Current Branch: ${{ github.ref }}"
-
       - name: List Files
-        run: |
-          ls -al
+        run: ls -al
 
 
