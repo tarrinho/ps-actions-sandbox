@@ -1,0 +1,19 @@
+name: Github variables
+ 
+on: [workflow_dispatch]
+ 
+jobs:
+  Job1:
+    runs-on: ubuntu-latest
+    env:
+      MY_ENV: 'Environment variable value'
+    steps:
+      - name: List_job
+      run: echo '${{ toJSON(job)}}'
+      - name: List_runner
+      run: echo '${{ toJSON(runner)}}'
+      - name: List_ENV
+      run: echo '${{ toJSON(env)}}'
+      - name: List_github
+      run: echo '${{ toJSON(github)}}'
+ 
