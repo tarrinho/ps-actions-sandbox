@@ -1,0 +1,34 @@
+name: GitHub Actions Demo1
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/**' # Ignore changes in .github folder
+  pull_request:
+    branches:
+      - main
+    types: [opened, synchronize]
+  schedule:
+    - cron: '15 6 * * 0' # Run every Sunday at 6:15 UTC
+  workflow_dispatch: # Manually trigger the workflow
+
+Build:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+        
+      - name: Print Event Name
+        run: echo "Event Name: ${{ github.event_name }}"
+
+      - name: Print Current Branch
+        run: echo "Current Branch: ${{ github.ref }}"
+
+      - name: List Files
+        run: |
+          ls -al
+
+
