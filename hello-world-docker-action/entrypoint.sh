@@ -1,5 +1,5 @@
 #!/bin/sh -l
 
-echo "hello $1"
+echo "hello Pedro"
 
 echo "time=$(date)" >> $GITHUB_OUTPUT
